@@ -40,7 +40,7 @@ You can support [[internal links]] with the `registerInternalLinkHook`
 method.  There is no default handling for internal links.  If no hook
 handles the link, it will appear unchanged in the output.  An internal
 link may have a `namespace:` prefix.  Hooks are registered per namespace,
-with 'None' for unprefixed links:
+with 'None' for unprefixed links::
 
 	def internalLinkHook(parser_env, namespace, body):
        	...
@@ -52,7 +52,7 @@ with 'None' for unprefixed links:
     	registerInternalLinkHook(':', hook)         # called for [[:any:link]]
     	registerInternalLinkHook('*', hook)         # called for [[anything]]
 
-Examples:
+Examples::
 
     	from wikimarkup import parse, registerInternalLinkHook
 
